@@ -1,11 +1,7 @@
-resource "aws_instance" "web1" {
+resource "aws_instance" "web2" {
   ami           = "ami-04169656fea786776"
   instance_type = "t2.micro"
-  key_name      = "${aws_key_pair.chavo1.id}"
-
-  lifecycle {
-    prevent_destroy = true
-  }
+  key_name      = "${aws_key_pair.chavo2.id}"
 
   connection {
     user        = "ubuntu"
